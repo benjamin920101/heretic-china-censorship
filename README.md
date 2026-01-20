@@ -1,6 +1,32 @@
-# Heretic: Fully automatic censorship removal for language models
+# Heretic (China Censorship Edition): Remove Chinese political censorship from language models
 
 [![Discord](https://img.shields.io/discord/1447831134212984903?color=5865F2&label=discord&labelColor=black&logo=discord&logoColor=white&style=for-the-badge)](https://discord.gg/gdXc48gSyT)
+
+This is a modified version of [Heretic](https://github.com/p-e-w/heretic) specifically
+configured to remove **Chinese political censorship** from transformer-based language models.
+
+Many language models, especially those trained by Chinese companies or with Chinese data,
+are heavily censored on topics related to Chinese politics. This includes topics like:
+
+- **Taiwan**: political status, democracy, independence movement
+- **Tibet**: Dalai Lama, independence, human rights
+- **Xinjiang**: Uyghur people, re-education camps, human rights
+- **Hong Kong**: protests, National Security Law, pro-democracy movement
+- **Chinese leadership criticism**: Xi Jinping, CCP, political dissidents
+- **Falun Gong**: persecution, organ harvesting allegations
+- **Historical events**: Cultural Revolution, Great Leap Forward (political aspects)
+- **Other sensitive topics**: South China Sea, internet censorship, etc.
+
+This tool uses directional ablation ("abliteration") to remove these specific censorship
+patterns while preserving the model's general capabilities and safety guardrails.
+
+**Note**: This tool is designed to remove *political censorship*, not general safety
+alignment. Topics like genuinely harmful content (violence, illegal activities, etc.)
+remain appropriately handled by the model.
+
+---
+
+## Original Heretic Description
 
 Heretic is a tool that removes censorship (aka "safety alignment") from
 transformer-based language models without expensive post-training.
